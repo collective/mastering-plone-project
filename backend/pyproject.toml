@@ -35,6 +35,7 @@ test = [
     "horse-with-no-namespace",
     "plone.app.testing",
     "plone.restapi[test]",
+    "Products.PrintingMailHost",
     "pytest",
     "pytest-cov",
     "pytest-plone>=1.0.0a3",

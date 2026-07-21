@@ -1,0 +1,22 @@
+{
+  "title": "Ploneconf Site",
+  "description": "The project for the Mastering Plone Development training",
+  "project_slug": "mastering-plone-project",
+  "hostname": "ploneconf.example.com",
+  "author": "Plone Community",
+  "email": "collective@plone.org",
+  "use_prerelease_versions": false,
+  "plone_version": "6.2.1",
+  "volto_version": "19.2.0",
+  "python_package_name": "ploneconf.site",
+  "frontend_addon_name": "volto-ploneconf-site",
+  "language_code": "en",
+  "github_organization": "collective",
+  "container_registry": "github",
+  "devops_storage": "relstorage",
+  "devops_cache": true,
+  "devops_ansible": true,
+  "devops_gha_deploy": true,
+  "initialize_documentation": true,
+  "__template__": "project"
+}

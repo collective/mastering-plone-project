@@ -13,6 +13,14 @@
       />
 
   <genericsetup:registerProfile
+      name="uninstall"
+      title="Ploneconf Site: Uninstall"
+      description="Package to uninstall a Ploneconf Site site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <genericsetup:registerProfile
       name="initial"
       title="Ploneconf Site: Example content"
       description="Create example content to showcase the new website"

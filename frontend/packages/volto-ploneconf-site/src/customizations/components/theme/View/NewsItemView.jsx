@@ -7,6 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container as SemanticContainer } from 'semantic-ui-react';
 import { hasBlocksData } from '@plone/volto/helpers/Blocks/Blocks';
+import FormattedDate from '@plone/volto/components/theme/FormattedDate/FormattedDate';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers/Url/Url';
 import RenderBlocks from '@plone/volto/components/theme/View/RenderBlocks';
 import config from '@plone/volto/registry';
@@ -24,6 +25,11 @@ const NewsItemView = ({ content }) => {
 
   return hasBlocksData(content) ? (
     <Container id="page-document" className="view-wrapper newsitem-view">
+      {content.review_state === 'published' && content.effective && (
+        <p>
+          <FormattedDate date={content.effective} includeTime />
+        </p>
+      )}
       <RenderBlocks content={content} />
     </Container>
   ) : (

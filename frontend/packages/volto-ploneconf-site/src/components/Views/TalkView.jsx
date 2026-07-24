@@ -1,5 +1,6 @@
 import { Container as SemanticContainer } from 'semantic-ui-react';
 import config from '@plone/volto/registry';
+import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 
 const colorMapping = {
   beginner: 'green',
@@ -21,14 +22,31 @@ const TalkView = (props) => {
       {content.description && (
         <p className="documentDescription">{content.description}</p>
       )}
-      {content.audience?.map((item) => {
-        let color = colorMapping[item.token] || 'green';
-        return (
-          <div className={`ui label ${color}`} key={item.token}>
-            {item.token}
-          </div>
-        );
-      })}
+      <div className="ui right floated segment">
+        {content.start && !content.hide_date && (
+          <>
+            <div className="ui dividing sub header">When</div>
+            <When
+              start={content.start}
+              end={content.end}
+              whole_day={content.whole_day}
+              open_end={content.open_end}
+            />
+          </>
+        )}
+        {content.audience && (
+          <div className="ui dividing sub header">Audience</div>
+        )}
+        {content.audience?.map((item) => {
+          let audience = item.token;
+          let color = colorMapping[audience] || 'green';
+          return (
+            <div className={`ui label ${color}`} key={audience}>
+              {audience}
+            </div>
+          );
+        })}
+      </div>
       <div dangerouslySetInnerHTML={{ __html: content.details.data }} />
       <div className="ui clearing segment">
         {content.speaker && (

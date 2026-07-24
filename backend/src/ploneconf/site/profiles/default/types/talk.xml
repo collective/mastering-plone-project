@@ -30,6 +30,7 @@
   <property name="behaviors">
     <element value="plone.dublincore" />
     <element value="plone.namefromtitle" />
+    <element value="ploneconf.featured" />
     <element value="plone.versioning" />
   </property>
   <property name="model_source" />

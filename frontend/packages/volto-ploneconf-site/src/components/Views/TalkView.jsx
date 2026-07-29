@@ -34,15 +34,21 @@ const TalkView = (props) => {
             />
           </>
         )}
+        {content.room && (
+          <>
+            <div className="ui dividing sub header">Where</div>
+            <p>{content.room.title}</p>
+          </>
+        )}
         {content.audience && (
           <div className="ui dividing sub header">Audience</div>
         )}
         {content.audience?.map((item) => {
-          let audience = item.token;
-          let color = colorMapping[audience] || 'green';
+          const audience = item.token;
+          const color = colorMapping[audience] || 'green';
           return (
             <div className={`ui label ${color}`} key={audience}>
-              {audience}
+              {item.title}
             </div>
           );
         })}

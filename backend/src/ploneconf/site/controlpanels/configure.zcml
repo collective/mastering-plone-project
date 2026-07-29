@@ -5,6 +5,9 @@
     i18n_domain="ploneconf.site"
     >
 
-  <!-- -*- extra stuff goes here -*- -->
+  <adapter
+      factory=".controlpanel.PloneConfRegistryConfigletPanel"
+      name="ploneconf-controlpanel"
+      />
 
 </configure>

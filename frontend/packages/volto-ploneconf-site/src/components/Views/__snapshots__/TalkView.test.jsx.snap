@@ -1,0 +1,48 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`renders a talk view component with only required props 1`] = `
+<div>
+  <div
+    class="ui container"
+    id="view-wrapper talk-view"
+  >
+    <h1
+      class="documentFirstHeading"
+    >
+      <span
+        class="type_of_talk"
+      >
+        Talk
+        : 
+      </span>
+      Security of Plone
+    </h1>
+    <p
+      class="documentDescription"
+    >
+      What makes Plone secure?
+    </p>
+    <div
+      class="ui right floated segment"
+    />
+    <div>
+      <p>
+        some details about this 
+        <strong>
+          talk
+        </strong>
+        .
+      </p>
+    </div>
+    <div
+      class="ui clearing segment"
+    >
+      <p />
+      <img
+        class="ui small right floated image"
+        item="[object Object]"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1352,6 +1352,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      semantic-ui-react:
+        specifier: 2.1.5
+        version: 2.1.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
     devDependencies:
       '@plone/registry':
         specifier: workspace:*
@@ -1371,6 +1374,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.1
         version: 18.3.7(@types/react@18.3.31)
+      redux-mock-store:
+        specifier: 1.5.4
+        version: 1.5.4
       release-it:
         specifier: ^19.0.5
         version: 19.2.4(@types/node@24.13.3)(magicast@0.3.5)

@@ -31,7 +31,8 @@
   ],
   "theme": "",
   "dependencies": {
-    "@plone/volto-form-block": "^1.0.0-alpha.0"
+    "@plone/volto-form-block": "^1.0.0-alpha.0",
+    "semantic-ui-react": "2.1.5"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -41,11 +42,12 @@
     "@plone/registry": "workspace:*",
     "@plone/scripts": "workspace:*",
     "@plone/types": "workspace:*",
+    "@testing-library/react": "^16.2.0",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.1",
-    "typescript": "^5.7.3",
-    "@testing-library/react": "^16.2.0",
+    "redux-mock-store": "1.5.4",
     "release-it": "^19.0.5",
+    "typescript": "^5.7.3",
     "vitest": "^3.1.2"
   }
 }

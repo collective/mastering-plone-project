@@ -5,4 +5,7 @@
   <object meta_type="Dexterity FTI"
           name="talk"
   />
+  <object meta_type="Dexterity FTI"
+          name="sponsor"
+  />
 </object>

@@ -37,4 +37,21 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="ploneconf.site:default"
+      source="1002"
+      destination="1003"
+      >
+    <genericsetup:upgradeDepends
+        title="Add textindexer behavior to talks"
+        description="Run typeinfo import step"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeStep
+        title="Reindex talks"
+        description="Update SearchableText index"
+        handler="ploneconf.site.upgrades.v1002.update_indexes"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

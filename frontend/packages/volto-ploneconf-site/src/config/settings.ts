@@ -2,6 +2,7 @@ import type { ConfigType } from '@plone/registry';
 import type { BlockExtension, ViewsConfig } from '@plone/types';
 import TalkView from '../components/Views/TalkView';
 import TalkListingBlockVariation from '../components/variations/TalkListingBlockVariation';
+import Sponsors from '../components/Sponsors/Sponsors';
 
 export default function install(config: ConfigType) {
   // Language settings
@@ -26,6 +27,12 @@ export default function install(config: ConfigType) {
       template: TalkListingBlockVariation,
     },
   ];
+
+  config.registerSlotComponent({
+    slot: 'belowContent',
+    name: 'sponsors',
+    component: Sponsors,
+  });
 
   return config;
 }

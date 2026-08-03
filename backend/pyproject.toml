@@ -28,6 +28,8 @@ dependencies = [
     "plone.api",
     "plone.restapi",
     "plone.volto",
+    "plone.formblock==1.0.0a3",
+    "z3c.jbot",
 ]
 
 [dependency-groups]

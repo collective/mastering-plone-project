@@ -26,9 +26,13 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
-  "addons": [],
+  "addons": [
+    "@plone/volto-form-block"
+  ],
   "theme": "",
-  "dependencies": {},
+  "dependencies": {
+    "@plone/volto-form-block": "^1.0.0-alpha.0"
+  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

@@ -54,4 +54,21 @@
         />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+      profile="ploneconf.site:default"
+      source="1003"
+      destination="1004"
+      >
+    <genericsetup:upgradeDepends
+        title="Add talks workflow"
+        description="Run workflow and plone.app.registry import steps"
+        import_steps="plone.app.registry workflow"
+        />
+    <genericsetup:upgradeStep
+        title="Configure talk permissions"
+        description="Configure local roles and type constraints for talk schedule"
+        handler="ploneconf.site.upgrades.v1004.configure_talk_permissions"
+        />
+  </genericsetup:upgradeSteps>
+
 </configure>

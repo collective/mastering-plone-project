@@ -40,7 +40,11 @@ const SummaryTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                   open_end={item.open_end}
                 />
                 <h3>{item.title || item.id}</h3>
-                <p>{item.speaker}</p>
+                {item.speakers?.length > 0 && (
+                  <p>
+                    {item.speakers.map((speaker) => speaker.title).join(', ')}
+                  </p>
+                )}
                 <p>
                   {item.room && (
                     <>

@@ -1,6 +1,9 @@
 import { Container as SemanticContainer } from 'semantic-ui-react';
+import Component from '@plone/volto/components/theme/Component/Component';
+import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import config from '@plone/volto/registry';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
+import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 
 const colorMapping = {
   beginner: 'green',
@@ -55,8 +58,44 @@ const TalkView = (props) => {
       </div>
       <div dangerouslySetInnerHTML={{ __html: content.details.data }} />
       <div className="ui clearing segment">
-        {content.speaker && (
-          <div className="ui dividing header">{content.speaker}</div>
+        {content.speakers?.length > 0 && (
+          <>
+            <div className="ui dividing header">Speaker(s)</div>
+            <div className="ui grid">
+              <div className="five column row">
+                {content.speakers.map((speaker) => (
+                  <div key={speaker['@id']} className="column">
+                    <UniversalLink href={speaker['@id']}>
+                      {!speaker.image_scales ||
+                      Object.keys(speaker.image_scales).length === 0 ? (
+                        <Image
+                          src={
+                            config.getComponent({
+                              name: 'DefaultImage',
+                              dependencies: ['listing', 'summary'],
+                            }).component || DefaultImageSVG
+                          }
+                          alt={speaker.title}
+                          className="ui image"
+                        />
+                      ) : (
+                        <Component
+                          componentName="PreviewImage"
+                          item={speaker}
+                          image_field="image"
+                          showDefault={true}
+                          alt={speaker.title}
+                          responsive={true}
+                          className="ui image"
+                        />
+                      )}
+                      <div>{speaker.title}</div>
+                    </UniversalLink>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
         )}
         {content.website ? (
           <p>

@@ -3,11 +3,11 @@ from plone.app.dexterity import textindexer
 from plone.app.textfield import RichText
 from plone.autoform import directives
 from plone.dexterity.content import Container
-from plone.namedfile.field import NamedBlobImage
-from plone.schema.email import Email
 from plone.supermodel import model
 from z3c.form.browser.checkbox import CheckBoxFieldWidget
 from z3c.form.browser.radio import RadioFieldWidget
+from z3c.relationfield.schema import RelationChoice
+from z3c.relationfield.schema import RelationList
 from zope.interface import implementer
 
 
@@ -39,43 +39,12 @@ class ITalk(model.Schema):
     )
 
     textindexer.searchable("speaker")
-    speaker = schema.TextLine(
-        title="Speaker",
-        description="Name (or names) of the speaker",
+    speakers = RelationList(
+        title="Speakers",
+        description="Speakers of the talk",
+        value_type=RelationChoice(vocabulary="ploneconf.speakers"),
         required=False,
-    )
-
-    company = schema.TextLine(
-        title="Company",
-        required=False,
-    )
-
-    email = Email(
-        title="Email",
-        description="Email address of the speaker",
-        required=False,
-    )
-
-    website = schema.TextLine(
-        title="Website",
-        required=False,
-    )
-
-    github = schema.TextLine(
-        title="Github username",
-        required=False,
-    )
-
-    image = NamedBlobImage(
-        title="Image",
-        description="Portrait of the speaker",
-        required=False,
-    )
-
-    speaker_biography = RichText(
-        title="Speaker Biography (max. 1000 characters)",
-        max_length=1000,
-        required=False,
+        default=[],
     )
 
     room = schema.Choice(

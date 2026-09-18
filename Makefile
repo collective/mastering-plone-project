@@ -15,7 +15,6 @@ REPOSITORY_SETTINGS := $(shell uvx repoplone settings dump)
 
 PROJECT_NAME := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.name')
 STACK_NAME=ploneconf-example-com
-
 VOLTO_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.frontend.volto_version')
 PLONE_VERSION := $(shell echo '$(REPOSITORY_SETTINGS)' | jq -r '.backend.base_package_version')
 
@@ -170,7 +169,7 @@ stack-status:  ## Local Stack: Check Status
 	@docker compose -f docker-compose.yml ps
 
 .PHONY: stack-stop
-stack-stop:  ##  Local Stack: Stop Services
+stack-stop:  ## Local Stack: Stop Services
 	@echo "Stop local Docker stack"
 	@docker compose -f docker-compose.yml stop
 

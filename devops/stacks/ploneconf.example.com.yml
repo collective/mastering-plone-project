@@ -1,5 +1,5 @@
 ---
-version: '3.8'
+version: "3.8"
 
 services:
   traefik:
@@ -85,12 +85,12 @@ services:
   varnish:
     image: ghcr.io/collective/mastering-plone-project-varnish:${STACK_PARAM:-latest}
     command:
-      - '-p'
-      - 'nuke_limit=2000'
-      - '-p'
-      - 'workspace_client=192k'
-      - '-p'
-      - 'workspace_backend=192k'
+      - "-p"
+      - "nuke_limit=2000"
+      - "-p"
+      - "workspace_client=192k"
+      - "-p"
+      - "workspace_backend=192k"
     depends_on:
       - traefik
       - frontend

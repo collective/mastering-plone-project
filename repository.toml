@@ -3,7 +3,7 @@ name = "mastering-plone-project"
 changelog = "CHANGELOG.md"
 version = "version.txt"
 version_format = "calver"
-container_images_prefix = "ghcr.io/collective/mastering-plone-project-"
+container_images_prefix = "ghcr.io/collective/mastering-plone-project"
 compose = ["docker-compose.yml"]
 
 [repository.towncrier]
@@ -30,5 +30,5 @@ publish = false
 
 [cookieplone]
 template = "project"
-template_version = "64f5d0cd6bb85631e8cf7ad2dfa0cabcafb4f100"
-generated_date = "2026-07-21 14:02:48"
+template_version = "db76a81d89db7ed23d6873e5323bdbfc63cd6197"
+generated_date = "2026-09-18 21:21:41"

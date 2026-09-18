@@ -119,6 +119,7 @@ services:
       - traefik.http.routers.rt-backend-api-internal.entrypoints=http
       - traefik.http.routers.rt-backend-api-internal.service=svc-backend
       - traefik.http.routers.rt-backend-api-internal.middlewares=gzip,mw-backend-vhm-api
+
       ## /ClassicUI
       - traefik.http.routers.rt-backend-classic.rule=Host(`mastering-plone-project.localhost`) && PathPrefix(`/ClassicUI`)
       - traefik.http.routers.rt-backend-classic.entrypoints=http

@@ -131,9 +131,10 @@ make lint
 | backend | `zpretty` | Checks XML and ZCML formatting  | -- |
 | frontend | ESLint | Checks JS / Typescript lint | [`frontend/.eslintrc.js`](.frontend/.eslintrc.js) |
 | frontend | prettier | Check JS / Typescript formatting  | [`frontend/.prettierrc`](.frontend/.prettierrc) |
-| frontend | Stylelint | Check Styles (css, less, sass) formatting  | [`frontend/.stylelintrc`](.frontend/.stylelintrc) |
+| frontend | Stylelint | Check Styles (css, less, sass) formatting  | [`frontend/.stylelintrc`](.stylelintrc) |
 
 Linters can be run individually within the `backend` or `frontend` folders.
+
 
 ## Internationalization 🌐
 
@@ -145,4 +146,4 @@ make i18n
 
 ## Credits and acknowledgements 🙏
 
-Generated using [Cookieplone (2.0.0b3)](https://github.com/plone/cookieplone) and [cookieplone-templates (64f5d0c)](https://github.com/plone/cookieplone-templates/commit/64f5d0cd6bb85631e8cf7ad2dfa0cabcafb4f100) on 2026-07-21 09:58:43.770026. A special thanks to all contributors and supporters!
+Generated using [Cookieplone (2.0.0)](https://github.com/plone/cookieplone) and [cookieplone-templates (db76a81)](https://github.com/plone/cookieplone-templates/commit/db76a81d89db7ed23d6873e5323bdbfc63cd6197) on 2026-09-18 14:20:52.557767. A special thanks to all contributors and supporters!

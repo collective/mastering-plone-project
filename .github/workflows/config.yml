@@ -10,7 +10,7 @@ on:
       python-version:
         required: false
         type: string
-        default: "3.14"
+        default: "3.13"
     outputs:
       acceptance:
         description: "Flag reporting if we should run the acceptance jobs"
@@ -68,12 +68,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-
       - name: Setup uv
         uses: plone/meta/.github/actions/setup_uv@2.x
         with:
           python-version: ${{ inputs.python-version }}
-          working-directory: '.'
+          working-directory: "."
 
       - name: Compute several vars needed for the CI
         id: vars
